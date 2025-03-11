@@ -1,0 +1,315 @@
+:root{
+    --text-color:#1a1c20;
+    --link-color:#4a76ee;
+    --background-color: #eeeff1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppines', sans-serif;
+    background-color: var(--background-color);
+}
+
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+
+nav .left a{
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a{
+    margin: 0 10px;
+    color: var(--text-color);
+}
+
+nav .right a:last-child{
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span{
+    margin: 5px;
+}
+/* Close Navbar*/
+
+/* Hero Section*/
+.hero-section{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.hero-section .text{
+    flex: 6;
+}
+
+.hero-section .headshort{
+    flex: 4;
+    display: flex;
+    justify-content: end;
+}
+
+.hero-section .headshort img{
+    width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.hero-section .text{
+    margin-right: 20px;
+}
+
+.hero-section .text p{
+    margin: 20px 0;
+}
+
+.hero-section .text .link a{
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+/* Skills Section */
+#skills{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+#skills h3{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#skills p{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#skills .cells{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+#skills .cells .cell{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border: 1.5px solid var(--text-color);
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+#skills .cells .cell i{
+    font-size: 30px;
+}
+
+/* Testimony */
+#testimony{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+#testimony .group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#testimony h3{
+    margin-bottom: 20px;
+}
+
+#testimony .person-details{
+    flex-basis: 20%;
+    text-align: center;
+}
+#testimony .person-details img{
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#testimony .text{
+    flex-basis: 80%;
+}
+
+/* Contact Section */
+
+#contact{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+#contact .group{
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+}
+
+#contact .text{
+    flex-basis: 48%;
+    margin-top: 10px;
+}
+
+#contact form{
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form input{
+    padding: 5px;
+    margin: 5px 0;
+    border-color: var(--link-color);
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+#contact form textarea{
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: var(--link-color);
+    resize: none;
+}
+
+#contact form button{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--link-color);
+    color: var(--background-color);
+    font: 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width:600px){
+
+    /* NAVBAR */
+    nav{
+        padding: 0 20px;
+    }
+
+    nav .right a span{
+        display: none;
+    }
+
+    nav .right a{
+        font-size: 22px;
+    }
+
+    nav .right a:last-child{
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    /* Testimony */
+    #testimony .group{
+        gap: 30px;
+    }
+    
+    /* Contact Section */
+    #contact {
+        padding: 0 20px;
+    }
+
+    #contact .text{
+        margin-bottom: 15px;
+    }
+
+    #contact h3{
+        text-align: center;
+        font-size: 30px;
+    }
+    #contact .group{
+        flex-direction: column;
+    }
+
+    /* Hero Section */
+    .hero-section{
+        flex-direction: column-reverse;
+        padding: 0 20px;
+    }
+    .hero-section .headshort img{
+        width: 300px;
+    }
+
+}
+
+@media (max-width:500px){
+
+    /* Skills */
+    #skills{
+        padding: 0 20px;
+    }
+
+    #testimony {
+        padding: 0 20px;
+    }
+
+    #testimony h3{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #testimony .group{
+        flex-direction: column;
+    }
+
+    #testimony .person-details img{
+        width: 300px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width:400px){
+    /* Hero Section */
+    .hero-section .headshort img{
+        width: 250px;
+        margin-bottom: 10px;
+    }
+    .hero-section .text .link a{
+        display: inline-block;
+    }
+
+}
